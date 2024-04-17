@@ -12,3 +12,19 @@ def divide(x, y):
         return x / y
     else:
         return "Cannot divide by zero"
+
+def get_user_input():
+    try:
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        return num1, num2
+    except ValueError:
+        print("Invalid input. Please enter numeric values.")
+        return None, None
+
+def main():
+    print("Select operation:")
+    print("1. Add (+)")
+    print("2. Subtract (-)")
+    print("3. Multiply (*)")
+    print("4. Divide (/)")
